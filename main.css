@@ -1,0 +1,158 @@
+html {
+    font-size: 100%;
+}
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--violet);
+    background-image: url(images/bg-mobile.svg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    font-family: 'Open Sans', sans-serif;
+}
+
+:root {
+    --white: hsl(0, 0%, 100%);
+    --violet: hsl(257, 40%, 49%);
+    --softmagenta: hsl(300, 69%, 71%);
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+a {
+    text-decoration: none;
+}
+
+header {
+    padding: 2em 0;
+    margin-bottom: 1.6em;
+}
+
+header img {
+    width: 8em;
+}
+main {
+    width: 100%;
+    text-align: center;
+    color: var(--white);
+}
+
+main img {
+    width: 100%;
+    margin-bottom: 3.5em;
+}
+
+.main-txt h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.5rem;
+    margin-bottom: 0.5em;
+}
+
+.main-txt p {
+    line-height: 1.4;
+    margin-bottom: 1.5em;
+}
+
+.main-txt .register {
+    width: 13em;
+    justify-content: center;
+    margin: auto;
+    display: flex;
+    color: var(--violet);
+    background-color: var(--white);
+    padding: .7em;
+    border-radius: 10em;
+    margin-bottom: 5em;
+    font-size: 0.9rem;
+    box-shadow: 0px 10px 12px 4px rgba(0,0,0,0.1);
+    transition: background-color 200ms;
+    transition: transform 200ms;
+}
+
+.main-txt .register:hover {
+    transform: scale(1.1);
+    background-color: var(--softmagenta);
+    color: var(--white);
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    gap: 0.7em;
+}
+
+footer img {
+    width: 32px;
+}
+
+@media (min-width: 450px) {
+    header img {
+        width: 10em;
+    }
+}
+
+@media (min-width: 930px){
+    html {
+        font-size: 150%;
+    }
+    body {
+        background-image: url(images/bg-desktop.svg);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .container {
+        width: 90%;
+    }
+
+    header {
+        margin-bottom: 1em;
+    }
+    main {
+        text-align: left;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    main img {
+        width: 60%;
+        margin-bottom: 0;
+    }
+
+    .main-txt {
+        width: 35%;
+        margin-top: 2.5em;
+    }
+
+    .main-txt .register{
+        margin: 0;
+    }
+
+    footer {
+        position: absolute;
+        bottom: 1em;
+        right: 5em;
+    }
+}
+
+@media (max-width: 1260px) {
+    html {
+        font-size: 120%;
+    }
+}
+
+@media (max-width: 1005px) {
+    html {
+        font-size: 110%;
+    }
+}
